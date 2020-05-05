@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #131313;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  background-color: rgba(19, 19, 19, 0.05);
+  width: 50vw;
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+}
+
+// Header
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+// Balance
+h2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(19, 19, 19);
+}
+
+// Income/Expenses
+p {
+  display: flex;
+  justify-content: space-between;
+}
+
+// History
+ul {
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-transform: capitalize;
+
+    button {
+      display: none;
+      padding: 5px 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid rgba(19, 19, 19, 0.05);
+        background-color: rgba(19, 19, 19, 0.05);
+      }
+    }
+
+    &:hover {
+      button {
+        display: inline-block;
+      }
+    }
+  }
+
+  .minus {
+    color: red;
+  }
+
+  .plus {
+    color: green;
+  }
+}
+
+// Add transaction
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input {
+    font-size: 1.25rem;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    &:hover {
+      border: 1px solid rgba(19, 19, 19, 0.05);
+      background-color: rgba(19, 19, 19, 0.05);
+    }
+  }
+}
